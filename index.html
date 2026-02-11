@@ -1,6 +1,199 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h1>Hola mundo</h1>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Web en Azure</title>
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --gray: #64748b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", system-ui, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: var(--light);
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      opacity: 0.85;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      color: var(--primary);
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      color: #cbd5f5;
+      margin-bottom: 2rem;
+    }
+
+    .buttons a {
+      padding: 0.9rem 1.8rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 0.5rem;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-secondary {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 4rem 3rem;
+    }
+
+    .card {
+      background: #020617;
+      border-radius: 1rem;
+      padding: 2rem;
+      border: 1px solid #1e293b;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .card h3 {
+      margin-bottom: 0.8rem;
+      color: var(--primary);
+    }
+
+    .card p {
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: var(--gray);
+      border-top: 1px solid #1e293b;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🚀 Mi Web Azure</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Proyectos</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Hola, soy <span>Miquel</span></h2>
+    <p>
+      Esta página está desplegada en <strong>Azure App Service</strong> directamente
+      desde GitHub. Moderna, rápida y lista para producción.
+    </p>
+
+    <div class="buttons">
+      <a href="#" class="btn-primary">Ver proyectos</a>
+      <a href="#" class="btn-secondary">Contactar</a>
+    </div>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h3>☁️ Azure</h3>
+      <p>
+        App Service, Deployment Slots, CI/CD con GitHub y escalado automático.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>💻 Desarrollo</h3>
+      <p>
+        HTML, CSS, JavaScript y buenas prácticas para aplicaciones modernas.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📈 Crecimiento</h3>
+      <p>
+        Preparado para añadir backend, APIs, autenticación y más.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 · Desplegado en Azure App Service
+  </footer>
+
+</body>
 </html>
